@@ -32,12 +32,8 @@ export const products: Product[] = [
     price: 7400,
     compareAtPrice: 8200,
     stock: 18,
-    image:
-      "https://images.unsplash.com/photo-1692117016229-93433657eec4?auto=format&fit=crop&w=900&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1692117016229-93433657eec4?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
-    ],
+    image: "/images/products/silver-vape-devices.jpg",
+    gallery: ["/images/products/silver-vape-devices.jpg", "/images/products/vape-mod-dark.jpg"],
     tags: ["Refillable", "USB-C", "Adjustable airflow"],
     description: "Compact refillable device with adjustable airflow and a premium metal finish.",
     fullDescription:
@@ -61,11 +57,8 @@ export const products: Product[] = [
     category: "Pods",
     price: 2600,
     stock: 32,
-    image:
-      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=900&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=1200&q=80",
-    ],
+    image: "/images/products/teal-pod-kit-box.jpg",
+    gallery: ["/images/products/teal-pod-kit-box.jpg", "/images/products/headline-pod-kit.jpg"],
     tags: ["Mint", "2 pack", "Mesh"],
     description: "Replacement mint pod pack for compatible adult-use devices.",
     fullDescription:
@@ -87,11 +80,8 @@ export const products: Product[] = [
     category: "Disposables",
     price: 3900,
     stock: 9,
-    image:
-      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?auto=format&fit=crop&w=900&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?auto=format&fit=crop&w=1200&q=80",
-    ],
+    image: "/images/products/vape-mod-dark.jpg",
+    gallery: ["/images/products/vape-mod-dark.jpg", "/images/products/silver-vape-devices.jpg"],
     tags: ["Ice", "Rechargeable", "Limited stock"],
     description: "Rechargeable disposable format with a chilled flavour profile.",
     fullDescription:
@@ -113,11 +103,8 @@ export const products: Product[] = [
     category: "E-liquids",
     price: 2100,
     stock: 24,
-    image:
-      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=80",
-    ],
+    image: "/images/products/teal-pod-device.jpg",
+    gallery: ["/images/products/teal-pod-device.jpg", "/images/products/teal-pod-kit-box.jpg"],
     tags: ["Berry", "30ml", "Restock alert"],
     description: "Berry-profile e-liquid for compatible refillable adult-use devices.",
     fullDescription:

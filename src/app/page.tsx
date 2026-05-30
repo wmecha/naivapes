@@ -1,7 +1,7 @@
-import { ArrowRight, BadgeCheck, CreditCard, PackageCheck, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, BadgeCheck, CreditCard, PackageCheck, ShieldCheck, Sparkles } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { LinkButton } from "@/components/ui/button";
-import { MotionCard } from "@/components/motion-card";
 import { ProductCard } from "@/components/product-card";
 import { collections, products } from "@/lib/data";
 
@@ -19,7 +19,7 @@ export default function Home() {
     <SiteShell>
       <section className="neon-grid relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_15%,rgba(16,185,129,0.28),transparent_30%),radial-gradient(circle_at_80%_25%,rgba(244,63,94,0.16),transparent_28%)]" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-76px)] max-w-7xl items-center gap-10 px-4 py-16 lg:grid-cols-[1fr_0.9fr]">
+        <div className="relative mx-auto grid min-h-[calc(100vh-76px)] max-w-7xl items-center gap-10 px-4 py-16 lg:grid-cols-[1fr_0.86fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">Adult-only ecommerce</p>
             <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
@@ -36,16 +36,20 @@ export default function Home() {
               </LinkButton>
             </div>
           </div>
-          <div className="relative min-h-[430px]">
-            {featured.slice(0, 3).map((product, index) => (
-              <MotionCard
-                key={product.id}
-                delay={index * 0.1}
-                className={`absolute ${index === 0 ? "left-0 top-4 w-64" : index === 1 ? "right-0 top-20 w-72" : "bottom-8 left-16 w-60"}`}
-              >
-                <ProductCard product={product} />
-              </MotionCard>
-            ))}
+          <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-white/10 bg-zinc-900 shadow-2xl shadow-emerald-950/30">
+            <Image
+              src="/images/products/vape-mod-dark.jpg"
+              alt="Close-up of a vape device on a dark premium background"
+              fill
+              priority
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 via-zinc-950/45 to-transparent" />
+            <div className="absolute bottom-0 left-0 max-w-sm p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-200">Verified adults only</p>
+              <p className="mt-3 text-2xl font-semibold text-white">Dark retail, clear warnings, real product imagery.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -77,6 +81,44 @@ export default function Home() {
               {collection}
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-16">
+        <div className="grid overflow-hidden rounded-lg border border-white/10 bg-zinc-900 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative min-h-[420px]">
+            <Image
+              src="/images/products/headline-pod-kit.jpg"
+              alt="Teal vape pod kit photographed on an orange editorial background"
+              fill
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/35 to-transparent" />
+          </div>
+          <div className="relative overflow-hidden p-8 md:p-10">
+            <div className="absolute right-6 top-6 grid size-12 place-items-center rounded-md bg-emerald-300 text-zinc-950">
+              <Sparkles className="size-6" aria-hidden />
+            </div>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-200">Headline drop</p>
+            <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight text-white md:text-5xl">
+              The city kit, shot like a night-market poster.
+            </h2>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-300">
+              A dedicated campaign block for featured launches, seasonal drops, or catalogue-only announcements.
+              It keeps the homepage hero clean while giving the brand room for a bold graphic moment.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {featured.slice(0, 2).map((product) => (
+                <div key={product.id} className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-zinc-400">{product.brand}</p>
+                  <p className="mt-2 font-semibold text-white">{product.name}</p>
+                  <p className="mt-3 text-sm text-emerald-200">{product.tags.slice(0, 2).join(" / ")}</p>
+                </div>
+              ))}
+            </div>
+            <LinkButton href="/shop" className="mt-8">Shop the drop</LinkButton>
+          </div>
         </div>
       </section>
 
