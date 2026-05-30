@@ -1,0 +1,150 @@
+import type { Product, SiteSettings } from "./types";
+
+export const siteSettings: SiteSettings = {
+  checkoutEnabled: true,
+  paystackEnabled: false,
+  catalogueOnly: false,
+  warningText:
+    "Adult-only nicotine products. Sale is restricted to verified adults aged 18 and above. Dispatch may require verification review.",
+  ageGateText: "This site is intended for adults aged 18 and above.",
+  businessName: "NaiVapes",
+  businessPhone: "+254 700 000 000",
+  businessEmail: "orders@naivapes.co.ke",
+  whatsappNumber: "+254 700 000 000",
+};
+
+export const collections = [
+  "Devices",
+  "Pods",
+  "Disposables",
+  "E-liquids",
+  "Accessories",
+  "New Arrivals",
+];
+
+export const products: Product[] = [
+  {
+    id: "prd_nova_x1",
+    slug: "nova-x1-starter-device",
+    name: "Nova X1 Starter Device",
+    brand: "NaiVapes Select",
+    category: "Devices",
+    price: 7400,
+    compareAtPrice: 8200,
+    stock: 18,
+    image:
+      "https://images.unsplash.com/photo-1692117016229-93433657eec4?auto=format&fit=crop&w=900&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1692117016229-93433657eec4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=1200&q=80",
+    ],
+    tags: ["Refillable", "USB-C", "Adjustable airflow"],
+    description: "Compact refillable device with adjustable airflow and a premium metal finish.",
+    fullDescription:
+      "A refined starter device for adult customers who want a compact, refillable format with adjustable airflow, USB-C charging, and a pocket-friendly finish.",
+    flavourFamily: "Device",
+    nicotineStrength: "Compatible with selected adult nicotine products",
+    deviceType: "Refillable pod device",
+    batteryCapacity: "900mAh",
+    podCapacity: "2ml",
+    coilCompatibility: "Nova mesh pods",
+    whatsInBox: ["Device body", "2ml pod", "USB-C cable", "Adult-use information card"],
+    warnings: ["Contains nicotine when used with nicotine products.", "Keep away from children and pets."],
+    featured: true,
+    bestSeller: true,
+  },
+  {
+    id: "prd_mint_pod",
+    slug: "metro-mint-pods",
+    name: "Metro Mint Pods",
+    brand: "Metro Labs",
+    category: "Pods",
+    price: 2600,
+    stock: 32,
+    image:
+      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=900&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=1200&q=80",
+    ],
+    tags: ["Mint", "2 pack", "Mesh"],
+    description: "Replacement mint pod pack for compatible adult-use devices.",
+    fullDescription:
+      "A two-pack of replacement pods with a mint flavour profile and mesh coil construction for compatible adult-use systems.",
+    flavourFamily: "Mint",
+    nicotineStrength: "20mg",
+    deviceType: "Closed pod",
+    podCapacity: "2ml each",
+    coilCompatibility: "Metro/Nova compatible",
+    whatsInBox: ["Two sealed pods", "Batch information"],
+    warnings: ["Contains nicotine.", "For verified adults only."],
+    featured: true,
+  },
+  {
+    id: "prd_noir_disposable",
+    slug: "noir-ice-disposable",
+    name: "Noir Ice Disposable",
+    brand: "Noir",
+    category: "Disposables",
+    price: 3900,
+    stock: 9,
+    image:
+      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?auto=format&fit=crop&w=900&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1622037022824-0c71d511ef3c?auto=format&fit=crop&w=1200&q=80",
+    ],
+    tags: ["Ice", "Rechargeable", "Limited stock"],
+    description: "Rechargeable disposable format with a chilled flavour profile.",
+    fullDescription:
+      "A compact rechargeable disposable for verified adult customers, with sealed construction and a chilled flavour profile.",
+    flavourFamily: "Ice",
+    nicotineStrength: "20mg",
+    deviceType: "Rechargeable disposable",
+    puffCount: "Up to 6000",
+    batteryCapacity: "650mAh",
+    whatsInBox: ["Sealed device", "Batch information"],
+    warnings: ["Contains nicotine.", "Do not sell or supply to persons under 18."],
+    bestSeller: true,
+  },
+  {
+    id: "prd_berry_liquid",
+    slug: "archive-berry-e-liquid",
+    name: "Archive Berry E-liquid",
+    brand: "Archive",
+    category: "E-liquids",
+    price: 2100,
+    stock: 24,
+    image:
+      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=80",
+    ],
+    tags: ["Berry", "30ml", "Restock alert"],
+    description: "Berry-profile e-liquid for compatible refillable adult-use devices.",
+    fullDescription:
+      "A berry-profile e-liquid for compatible refillable devices. Product details and batch information should be reviewed before purchase.",
+    flavourFamily: "Berry",
+    nicotineStrength: "10mg",
+    deviceType: "Refillable compatible",
+    podCapacity: "30ml bottle",
+    whatsInBox: ["30ml bottle", "Batch information"],
+    warnings: ["Contains nicotine.", "Store securely and away from minors."],
+    newArrival: true,
+  },
+];
+
+export const deliveryZones = [
+  { zone: "Nairobi CBD", fee: 250, eta: "Same day" },
+  { zone: "Westlands / Kilimani", fee: 350, eta: "Same day" },
+  { zone: "Karen / Runda", fee: 500, eta: "Next day available" },
+];
+
+export const adminStats = [
+  { label: "Today's revenue", value: "KES 82,400" },
+  { label: "Total orders", value: "146" },
+  { label: "Pending orders", value: "12" },
+  { label: "Paid orders", value: "92" },
+  { label: "Age review", value: "7" },
+  { label: "Low stock", value: "5" },
+  { label: "Failed payments", value: "3" },
+  { label: "Recent customers", value: "38" },
+];
